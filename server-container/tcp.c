@@ -16,7 +16,9 @@
 
 int new_socket;
 struct sockaddr_in address;
-struct sock *sock_fd;
+struct sock sock_beta;
+struct sock *sock_fd = &sock_beta;
+
 
 int getSocket() {
 	sock_fd->fd = socket(AF_INET,SOCK_STREAM,0); // getting the socket 
@@ -25,9 +27,9 @@ int getSocket() {
 	}
 
 	if (sock_fd->fd < 0) {
-		return TCP_ERROR;
+		return -1;
 	}
-	return TCP_SUCCESS;
+	return 0;
 }
 
 void connect_tcp(int port) {

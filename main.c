@@ -6,7 +6,7 @@
 
 
 int main(void) {
-	if (getSocket() == TCP_SUCCESS) {
+	if (getSocket() < 0) {
 		printf("Socket create success fully\n");
 	}
 	return 0;
