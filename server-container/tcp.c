@@ -42,6 +42,15 @@ int getSocket() {
 	return TCP_SUCCESS;
 }
 
+void accept_tcp() {
+int addrlen = sizeof(address);
+	new_socket = accept(sock_fd->fd,(struct sockaddr*)&address, (socklen_t*)&addrlen);
+	if (new_socket < 0) {
+		perror ("Accept");
+		exit(EXIT_FAILURE);
+	}
+
+}
 void connect_tcp(int port) {
 	int addrlen = sizeof(address);
 	int opt = 1;
@@ -58,21 +67,15 @@ void connect_tcp(int port) {
 	address.sin_addr.s_addr = INADDR_ANY;
 
 	address.sin_port = htons(port);
-
+	printf("\nListining to port : %d",port);
 	if( bind(sock_fd->fd,(struct sockaddr*)&address,sizeof(address)) < 0) {
 		perror ("Bind");
 		exit(EXIT_FAILURE);
 	}
-	printf("\nListining to port : %d",port);
 	if (listen(sock_fd->fd,3) < 0) {
 		perror ("Listening");
 		exit(EXIT_FAILURE);
 	}
 	
-	new_socket = accept(sock_fd->fd,(struct sockaddr*)&address, (socklen_t*)&addrlen);
-	if (new_socket < 0) {
-		perror ("Accept");
-		exit(EXIT_FAILURE);
-	}
 }
 

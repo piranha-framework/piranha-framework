@@ -11,3 +11,4 @@ int getSocket();
 void connect_tcp();
 void read_tcp(char* buffer);
 void send_tcp(char* sendableData);
+void accept_tcp();
