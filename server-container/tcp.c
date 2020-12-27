@@ -20,20 +20,32 @@ struct sock sock_beta;
 struct sock *sock_fd = &sock_beta;
 
 
+
+
+void read_tcp(char* buffer) {
+	int readVal;
+
+	readVal = read(new_socket,buffer, 1024);
+	//printf("%s\n",buffer);
+}
+
+void send_tcp(char* sendableData) {
+	send(new_socket,sendableData,strlen(sendableData),0);
+}
+
 int getSocket() {
 	sock_fd->fd = socket(AF_INET,SOCK_STREAM,0); // getting the socket 
 	if (sock_fd->fd == 0) {
 		printf("Socket failed\n");
+		return TCP_ERROR;
 	}
-
-	if (sock_fd->fd < 0) {
-		return -1;
-	}
-	return 0;
+	return TCP_SUCCESS;
 }
 
 void connect_tcp(int port) {
+	int addrlen = sizeof(address);
 	int opt = 1;
+	char* buffer = (char*) malloc(sizeof(char)* 2043);
 
 	if (setsockopt (sock_fd->fd,SOL_SOCKET,SO_REUSEADDR | SO_REUSEPORT,&opt,sizeof(opt))) {
 		perror ("setsockopt");
@@ -51,25 +63,16 @@ void connect_tcp(int port) {
 		perror ("Bind");
 		exit(EXIT_FAILURE);
 	}
-
-	if (listen(sock_fd->fd,50) < 0) {
+	printf("\nListining to port : %d",port);
+	if (listen(sock_fd->fd,3) < 0) {
 		perror ("Listening");
 		exit(EXIT_FAILURE);
 	}
-}
-
-void read_tcp(char* buffer) {
-	int readVal,addrlen = sizeof (address);
-
+	
 	new_socket = accept(sock_fd->fd,(struct sockaddr*)&address, (socklen_t*)&addrlen);
 	if (new_socket < 0) {
 		perror ("Accept");
 		exit(EXIT_FAILURE);
 	}
-
-	readVal = read(new_socket,buffer, 1024);
 }
 
-void send_tcp(char* sendableData) {
-	send(new_socket,sendableData,strlen(sendableData),0);
-}

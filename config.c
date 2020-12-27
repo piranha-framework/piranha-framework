@@ -5,7 +5,5 @@
 #define TEMPLATES_PATH "templates/"
 #define STATIC_FILES "static/"
 
-int main(void) {
+//
 
-	return 0;
-}
