@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-void strupr(char* buffer) {
+char* strupr(char* buffer) {
 	int buffer_len = strlen(buffer);
 
 	for (int i = 0; i < buffer_len; i++) {
@@ -17,5 +17,6 @@ void strupr(char* buffer) {
 		}
 
 	}
+	return buffer;
 
 }

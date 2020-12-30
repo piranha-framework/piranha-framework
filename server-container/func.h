@@ -1,3 +1,3 @@
 #pragma once
 
-void strupr(char* buffer);
+char* strupr(char* buffer);
