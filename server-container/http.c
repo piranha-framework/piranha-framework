@@ -1,18 +1,17 @@
 #include "http.h"
+#include "func.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define HTTP_GET 100
-#define HTT_POST 200
-#define HTTP_ERROR -100
-
 int http_get(char* buffer) {
-	strupr(buffer);
 	char* ret;
-	ret = strstr(buffer, "GET");
+	char* result;
+	ret = strupr(buffer); // converting the string into upper case 
+	result = strstr(buffer,"GET");
 
-	if (ret != NULL) return HTTP_GET;
+
+	if (result != NULL) return HTTP_GET;
 	else HTTP_ERROR;
 }

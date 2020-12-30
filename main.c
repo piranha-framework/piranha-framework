@@ -27,17 +27,17 @@ int main(void) {
 	connect_tcp(port);
 while(1) {
 	accept_tcp();
-	printf("This is first ");
 	read_tcp (buffer);
-	if (http_get(buffer) < 0) {
-		printf("Request is not get\n");
+	if (http_get(buffer) == HTTP_GET) {
+		printf("\nConnection response is get request\n");
+		
 	} else {
-		printf("Request is get\n");
+		
+		printf("\nConnect response is post request\n");
+		
 	}
 	send_tcp(hello);
-}
-
-	
+}	
 
 	return 0;
 }

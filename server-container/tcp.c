@@ -31,6 +31,7 @@ void read_tcp(char* buffer) {
 
 void send_tcp(char* sendableData) {
 	send(new_socket,sendableData,strlen(sendableData),0);
+	//close(new_socket);
 	close(new_socket);
 }
 
