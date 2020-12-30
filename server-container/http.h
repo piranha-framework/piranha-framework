@@ -7,6 +7,6 @@
 #define HTTP_DELETE 400
 
 int http_get(char *buffer);
-void http_post();
-void http_put();
-void http_delete();
+int http_post(char* buffer);
+int http_put(char* buffer);
+int http_delete(char* buffer);
