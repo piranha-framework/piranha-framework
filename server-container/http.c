@@ -1,16 +1,18 @@
 #include "http.h"
-#include "tcp.h"
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void http_get() {
-	char *buffer = (char*)malloc(sizeof(char)*1024);
+#define HTTP_GET 100
+#define HTT_POST 200
+#define HTTP_ERROR -100
 
-	connect_tcp();
-	accept_tcp();
-	read_tcp(buffer);
+int http_get(char* buffer) {
+	strupr(buffer);
+	char* ret;
+	ret = strstr(buffer, "GET");
 
-	// we have to see if this response contain http get or post req
-
+	if (ret != NULL) return HTTP_GET;
+	else HTTP_ERROR;
 }

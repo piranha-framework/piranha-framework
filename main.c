@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "config.h" // This header file containing the info about configuration of the framework
 #include "server-container/tcp.h"
+#include "server-container/http.h"
 
 
 int main(void) {
@@ -28,6 +29,11 @@ while(1) {
 	accept_tcp();
 	printf("This is first ");
 	read_tcp (buffer);
+	if (http_get(buffer) < 0) {
+		printf("Request is not get\n");
+	} else {
+		printf("Request is get\n");
+	}
 	send_tcp(hello);
 }
 
