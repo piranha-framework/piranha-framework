@@ -5,10 +5,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-void match_pattern(char* buffer) {
-	char *tempBuffer;
-	
-	strcpy(tempBuffer,buffer);
-	//
-	
+void elementSize(int size) {
+	element_size.size = size;
 }
