@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// return HTTP_GET if the request header contain the GET request
 int http_get(char* buffer) {
 	char* ret;
 	char* result;
@@ -17,7 +18,8 @@ int http_get(char* buffer) {
 }
 
 int http_post(char* buffer) {
-	char ret,result;
+	char* ret; 
+	char* result;
 
 	ret = strupr(buffer);
 	result = strstr(buffer, "POST");
@@ -26,7 +28,8 @@ int http_post(char* buffer) {
 }
 
 int http_put(char* buffer) {
-	char* ret, result;
+	char* ret;
+	char* result;
 
 	ret = strupr(buffer);
 	result = strstr(buffer, "PUT");
@@ -35,7 +38,8 @@ int http_put(char* buffer) {
 }
 
 int http_delete(char* buffer) {
-	char* ret, result;
+	char* ret;
+	char* result;
 
 	ret = strupr(buffer);
 	result = strstr(buffer, "DELETE");
