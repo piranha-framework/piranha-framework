@@ -4,13 +4,22 @@
 struct routeContainer {
 	char* pattern;
 	char* controller;
-	char* func;
+	void (*func)(); // accepting a call back function
 };
 
-struct elementSize {int size;};
-struct elementSize element_size;
+struct routeNode {
+	struct routeContainer route_container;
+	struct *Node next; // tail of the linked list
+};
 
-struct routeContainer* container;
+struct routeNode* container = NULL;
 
-void addRouteToArray(struct routeContainer* container);
 void elementSize(int size);
+
+
+// Linked list operation
+void createNode(struct routeContainer route_container);
+void insert(struct routeNode** container,struct routeContainer route);
+
+// main code section
+void addRouteToList(struct routeContainer route);

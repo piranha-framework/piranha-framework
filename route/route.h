@@ -4,11 +4,13 @@
 #include <string.h>
 #include "../server-container/router.h"
 
-elementSize(10);// inserting 10 route pattern in router
+// importing controller func
+#include "../controller/homeController.h"
+
 
 struct routeContainer route;
 strcpy(route.controller,"homeController");
-strcpy(route.func,"index");
+route.func = helloCont.hello; // assiging the function for router algorithm
 strcpy(route.pattern,"home/");
 
-addRotueToArray(route);
+addRotueToList(route);
