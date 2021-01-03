@@ -8,6 +8,8 @@
 #include "../controller/homeController.h"
 
 
+struct helloController helloCont = getHelloController();
+
 struct routeContainer route;
 strcpy(route.controller,"homeController");
 route.func = helloCont.hello; // assiging the function for router algorithm

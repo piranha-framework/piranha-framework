@@ -8,5 +8,7 @@ char* hello() {
 	return "Hello world";
 }
 
-struct helloController helloCont;
-helloCont.hello = &hello;
+struct helloController getHelloController() {
+	struct helloController helloCont;
+	helloCont.hello = &hello;
+}
