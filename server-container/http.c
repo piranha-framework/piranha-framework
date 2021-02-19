@@ -46,3 +46,8 @@ int http_delete(char* buffer) {
 	if (result != NULL) return HTTP_DELETE;
 	else return HTTP_ERROR;
 }
+
+void http_response(Response res) {
+	// This function is responsible for response any http response
+
+}

@@ -78,6 +78,4 @@ void connect_tcp(int port) {
 		perror ("Listening");
 		exit(EXIT_FAILURE);
 	}
-	
 }
-
