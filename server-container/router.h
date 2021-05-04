@@ -7,4 +7,8 @@ struct routeContainer {
 };
 
 
+
+char* get_request_param();
+
+
 void beginRouting(void); // This function mainly responsible for all kind of routing in the piranha framework

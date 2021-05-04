@@ -3,7 +3,7 @@
 
 char* comparableString = "hello";
 
-TEST(funcTest) {
+TEST(StrUprTest,PositiveNos) {
 	ASSERT_EQ(comparableString,strupr("hello"));
 
 }

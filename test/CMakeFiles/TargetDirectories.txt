@@ -1,0 +1,4 @@
+/home/unroot/Desktop/cleaning/unused/piranha-framework/test/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/cleaning/unused/piranha-framework/test/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/cleaning/unused/piranha-framework/test/CMakeFiles/test.dir
+/home/unroot/Desktop/cleaning/unused/piranha-framework/test/CMakeFiles/Tutorial.dir

@@ -45,7 +45,7 @@ int getSocket() {
 }
 
 void accept_tcp() {
-int addrlen = sizeof(address);
+	int addrlen = sizeof(address);
 	new_socket = accept(sock_fd->fd,(struct sockaddr*)&address, (socklen_t*)&addrlen);
 	if (new_socket < 0) {
 		perror ("Accept");
@@ -53,6 +53,7 @@ int addrlen = sizeof(address);
 	}
 
 }
+
 void connect_tcp(int port) {
 	int addrlen = sizeof(address);
 	int opt = 1;

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Tutorial.dir/testHttp.cpp.o  -o Tutorial  -lgtest -lgtest_main -lpthread 

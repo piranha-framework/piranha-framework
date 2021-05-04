@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/// return HTTP_GET if the request header contain the GET request
+// return HTTP_GET if the request header contain the GET request
 int http_get(char* buffer) {
 	char* ret;
 	char* result;
@@ -50,4 +50,9 @@ int http_delete(char* buffer) {
 void http_response(Response res) {
 	// This function is responsible for response any http response
 
+}
+
+Request http_request () {
+	Request reqObj;
+	
 }
