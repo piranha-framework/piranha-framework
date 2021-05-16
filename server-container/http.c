@@ -1,5 +1,6 @@
 #include "http.h"
 #include "func.h"
+#include "tcp.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,12 +48,12 @@ int http_delete(char* buffer) {
 	else return HTTP_ERROR;
 }
 
-void http_response(Response res) {
+int send_http_response(Response res) {
 	// This function is responsible for response any http response
-
 }
 
-Request http_request () {
+int send_http_request (Request req) {
+	// extract request info from url and provide the data to the user.
 	Request reqObj;
 	
 }
