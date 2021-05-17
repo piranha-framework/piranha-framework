@@ -1,9 +1,5 @@
-cmake_minimum_required(VERSION 2.8.12)
-project(piranha-framework)
+cmake_minimum_required(VERSION 3.10)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-add_executable(main main.c)
-#target_link_libraries(src/*.h ${CONAN_LIBS})
-
+# set the project name
+project(Piranha)
+add_executable(Piranha)

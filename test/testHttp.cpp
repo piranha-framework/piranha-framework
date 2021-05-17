@@ -1,7 +1,10 @@
 #include <gtest/gtest.h>
 #include "../server-container/func.c"
+#include <iostream>
 
-char* comparableString = "hello";
+using namespace std;
+
+string comparableString = "HELLO";
 
 TEST(StrUprTest,PositiveNos) {
 	ASSERT_EQ(comparableString,strupr("hello"));

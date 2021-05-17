@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 int main(void) {
-	debug("Hello this is debug func\n");
-	error("Hello this is error func\n");
-	warning("Hello this is warning func\n");
+	debug("This is debug msg\n");
+	warning("This is warning msg\n");
+	error("This is error msg\n");
+
+	return 0;
 }

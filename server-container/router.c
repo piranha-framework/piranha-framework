@@ -4,6 +4,7 @@
 
 #include "../route/route.h"
 #include "http.h"
+#include "logger.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -16,5 +17,6 @@
 */
 
 void beginRouting(void) {
+	debug("Starting the server....\n");
 	// This routing the component is main routing component
 }
