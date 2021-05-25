@@ -6,4 +6,4 @@
 #define STATIC_FILES "static/"
 #define ROUTE "route/"
 
-int port = 4445;
+static int port = 4445;

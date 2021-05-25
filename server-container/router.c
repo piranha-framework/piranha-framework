@@ -18,5 +18,6 @@
 
 void beginRouting(void) {
 	debug("Starting the server....\n");
+	struct routeContainer rContainer = getRoute();
 	// This routing the component is main routing component
 }
