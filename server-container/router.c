@@ -16,8 +16,12 @@
 	@description: Creates a new routeNode
 */
 
-void beginRouting(void) {
+struct routeContainer beginRouting(char* buffer) {
 	debug("Starting the server....\n");
+
 	struct routeContainer rContainer = getRoute();
+	
 	// This routing the component is main routing component
+
+	return rContainer;
 }

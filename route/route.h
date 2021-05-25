@@ -14,7 +14,8 @@ struct routeContainer getRoute() {
 	struct routeContainer route;
 	//strcpy(route.controller,"homeController"); // We don't need to provide any kind of controller name in this framework
 	route.func = (void*) helloCont_hello.hello; // assiging the function for router algorithm
-	strcpy(route.pattern,"home/");
+	//strcpy(route.pattern,"home/");
+	route.pattern = "/home";
 
 	return route;
 }

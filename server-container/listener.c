@@ -4,6 +4,8 @@
  * */
 
 #include "listener.h"
+#include "router.h"
+#include "logger.h"
 
 void start_listen() {
 	// This function is responsible to listen to a client Note: I might make this server concurrent in later
@@ -11,7 +13,7 @@ void start_listen() {
 	char* buffer = (char*)malloc(sizeof(char)*1024);
 
 	if (getSocket() == TCP_SUCCESS) {
-		printf("Socket create success fully\n");
+		debug("Socket create success fully\n");
 	}
 
 	char *hello =
@@ -31,19 +33,25 @@ void start_listen() {
 	while(1) {
 		accept_tcp();
 		read_tcp (buffer);
+		printf("Printing the buffer: %s",buffer);
+
+		struct routeContainer routerResponse = beginRouting(buffer); // feeding the incoming data buffer to the router; This should return the function that has to execute
+		char* ret = (char*) routerResponse.func();
+
 		if (http_get(buffer) == HTTP_GET) {
-			printf("\nConnection response is get request\n");
+			debug("\nConnection response is get request\n");
 		
 		} else {
 		
-			printf("\nConnect response is post request\n");
+			debug("\nConnect response is post request\n");
 		
 		}
-		send_tcp(hello);
+		send_tcp(ret);
 	}	
 
 }
 
 void stop_listen(void) {
 	// this function reponsible of terminating the server but it's not going to be in use often time.
+
 }

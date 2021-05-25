@@ -1,7 +1,6 @@
 #pragma once
 
 struct helloController_hello { // Syntax : controllerName_function_name
-
 	char* (*hello)();
 };
 

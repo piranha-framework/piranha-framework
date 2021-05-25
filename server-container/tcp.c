@@ -11,8 +11,11 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <string.h>
+#include <arpa/inet.h>
 
 #include "tcp.h" // tcp header file
+#include "../config.h"
+#include "logger.h"
 
 int new_socket;
 struct sockaddr_in address;
@@ -67,7 +70,12 @@ void connect_tcp(int port) {
 	
 
 	address.sin_family = AF_INET;
-	address.sin_addr.s_addr = INADDR_ANY;
+	struct in_addr converted_url;
+	int ok = inet_aton(ROUTE_URL,&converted_url); // changing from INADDR_ANY;
+	if (ok == 1)
+		address.sin_addr.s_addr = converted_url.s_addr;
+	else 
+		error("Sorry inet_aton() has some problem!!");
 
 	address.sin_port = htons(port);
 	printf("\nListining to port : %d",port);

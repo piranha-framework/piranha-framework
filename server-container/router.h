@@ -3,7 +3,7 @@
 
 struct routeContainer {
 	char* pattern;
-	void (*func)(); // accepting a call back function
+	void* (*func)(); // accepting a call back function
 };
 
 
@@ -11,4 +11,4 @@ struct routeContainer {
 char* get_request_param();
 
 
-void beginRouting(void); // This function mainly responsible for all kind of routing in the piranha framework
+struct routeContainer beginRouting(char* buffer); // This function mainly responsible for all kind of routing in the piranha framework
