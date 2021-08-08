@@ -8,7 +8,6 @@
 
 // TODO: We have to make http request and response header machanism so that the request can be extract from and send towards the http protocol
 
-
 /********************** User defined data types ***********************/
 struct Response {
     char* buffer; // Sendable http/text contant
@@ -28,11 +27,16 @@ struct Request {
 typedef struct Response Response;
 typedef struct Request Request;
 
-/********************** Prototypes ***********************/
+namespace piranha {
+    class http {
+        public:
+        /********************** Prototypes ***********************/
 
-int http_get(char *buffer);
-int http_post(char* buffer);
-int http_put(char* buffer);
-int http_delete(char* buffer);
-int send_http_response(Response res);
-int send_http_request(Request req);
+            int http_get(char *buffer);
+            int http_post(char* buffer);
+            int http_put(char* buffer);
+            int http_delete(char* buffer);
+            int send_http_response(Response res);
+            int send_http_request(Request req);
+    };
+}
