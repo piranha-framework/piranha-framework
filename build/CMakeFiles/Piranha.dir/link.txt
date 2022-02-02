@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Piranha.dir/main.cpp.o -o Piranha   -L/home/unroot/Desktop/piranha-framework/server-container  -Wl,-rpath,/home/unroot/Desktop/piranha-framework/server-container server-container/libserver-container.a 

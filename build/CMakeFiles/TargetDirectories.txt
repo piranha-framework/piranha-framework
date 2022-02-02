@@ -1,3 +1,6 @@
-/home/unroot/Desktop/cleaning/unused/piranha-framework/build/CMakeFiles/rebuild_cache.dir
-/home/unroot/Desktop/cleaning/unused/piranha-framework/build/CMakeFiles/edit_cache.dir
-/home/unroot/Desktop/cleaning/unused/piranha-framework/build/CMakeFiles/main.dir
+/home/unroot/Desktop/piranha-framework/build/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/piranha-framework/build/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/piranha-framework/build/CMakeFiles/Piranha.dir
+/home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/server-container.dir
