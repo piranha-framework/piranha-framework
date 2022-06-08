@@ -144,6 +144,33 @@ server-container/fast:
 	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/build
 .PHONY : server-container/fast
 
+FileChangeWatcher.o: FileChangeWatcher.cpp.o
+
+.PHONY : FileChangeWatcher.o
+
+# target to build an object file
+FileChangeWatcher.cpp.o:
+	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o
+.PHONY : FileChangeWatcher.cpp.o
+
+FileChangeWatcher.i: FileChangeWatcher.cpp.i
+
+.PHONY : FileChangeWatcher.i
+
+# target to preprocess a source file
+FileChangeWatcher.cpp.i:
+	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.i
+.PHONY : FileChangeWatcher.cpp.i
+
+FileChangeWatcher.s: FileChangeWatcher.cpp.s
+
+.PHONY : FileChangeWatcher.s
+
+# target to generate assembly for a file
+FileChangeWatcher.cpp.s:
+	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.s
+.PHONY : FileChangeWatcher.cpp.s
+
 func.o: func.cpp.o
 
 .PHONY : func.o
@@ -396,6 +423,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server-container"
+	@echo "... FileChangeWatcher.o"
+	@echo "... FileChangeWatcher.i"
+	@echo "... FileChangeWatcher.s"
 	@echo "... func.o"
 	@echo "... func.i"
 	@echo "... func.s"

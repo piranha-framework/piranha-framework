@@ -1,12 +1,12 @@
+#include <iostream>
+
+// Project header files including submodules and src headers
 #include <listener.hpp>
 #include <template_parser.hpp>
-
-#include <iostream>
+#include <spdlog/spdlog.h>
 
 int main(void) {
 	piranha::listener * listener_obj = new piranha::listener();
-	// piranha::template_parser * parser = new piranha::template_parser();
-	// std::string path = "template/index.html";
-	// parser->get_template(path);
+	spdlog::info("Hello world this is logging from spdlog");
 	listener_obj->start_listen();
 }

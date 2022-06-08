@@ -11,6 +11,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.18.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeSystem.cmake"
+  "../lib/spdlog/CMakeLists.txt"
+  "../lib/spdlog/cmake/ide.cmake"
+  "../lib/spdlog/cmake/utils.cmake"
   "../server-container/CMakeLists.txt"
   "/usr/share/cmake-3.18/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake"
@@ -21,10 +24,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.18/Modules/CheckCSourceCompiles.cmake"
+  "/usr/share/cmake-3.18/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.18/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.18/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.18/Modules/FindThreads.cmake"
+  "/usr/share/cmake-3.18/Modules/GNUInstallDirs.cmake"
   "/usr/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/share/cmake-3.18/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.18/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -43,10 +53,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "server-container/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/spdlog/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Piranha.dir/DependInfo.cmake"
   "server-container/CMakeFiles/server-container.dir/DependInfo.cmake"
+  "lib/spdlog/CMakeFiles/spdlog.dir/DependInfo.cmake"
   )

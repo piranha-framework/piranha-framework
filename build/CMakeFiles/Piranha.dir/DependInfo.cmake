@@ -8,14 +8,21 @@ set(CMAKE_DEPENDS_CHECK_CXX
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SPDLOG_COMPILED_LIB"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../server-container"
+  "../lib/spdlog/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/server-container.dir/DependInfo.cmake"
+  "/home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/spdlog.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

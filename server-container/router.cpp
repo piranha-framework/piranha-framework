@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+//#include "../lib/spdlog/include/spdlog"
 
 namespace piranha {
 	piranha::logger * logger_obj = new piranha::logger();

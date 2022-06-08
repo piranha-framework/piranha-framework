@@ -155,6 +155,19 @@ server-container/fast:
 	$(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/build
 .PHONY : server-container/fast
 
+#=============================================================================
+# Target rules for targets named spdlog
+
+# Build rule for target.
+spdlog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spdlog
+.PHONY : spdlog
+
+# fast build rule for target.
+spdlog/fast:
+	$(MAKE) $(MAKESILENT) -f lib/spdlog/CMakeFiles/spdlog.dir/build.make lib/spdlog/CMakeFiles/spdlog.dir/build
+.PHONY : spdlog/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -192,6 +205,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Piranha"
 	@echo "... server-container"
+	@echo "... spdlog"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -4,3 +4,6 @@
 /home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/rebuild_cache.dir
 /home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/edit_cache.dir
 /home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/server-container.dir
+/home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/spdlog.dir
