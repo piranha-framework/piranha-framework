@@ -126,6 +126,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	cd /home/unroot/Desktop/piranha-framework/build && $(CMAKE_COMMAND) -P /home/unroot/Desktop/piranha-framework/build/CMakeFiles/VerifyGlobs.cmake
 	cd /home/unroot/Desktop/piranha-framework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -143,33 +144,6 @@ server-container: server-container/CMakeFiles/server-container.dir/rule
 server-container/fast:
 	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/build
 .PHONY : server-container/fast
-
-FileChangeWatcher.o: FileChangeWatcher.cpp.o
-
-.PHONY : FileChangeWatcher.o
-
-# target to build an object file
-FileChangeWatcher.cpp.o:
-	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o
-.PHONY : FileChangeWatcher.cpp.o
-
-FileChangeWatcher.i: FileChangeWatcher.cpp.i
-
-.PHONY : FileChangeWatcher.i
-
-# target to preprocess a source file
-FileChangeWatcher.cpp.i:
-	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.i
-.PHONY : FileChangeWatcher.cpp.i
-
-FileChangeWatcher.s: FileChangeWatcher.cpp.s
-
-.PHONY : FileChangeWatcher.s
-
-# target to generate assembly for a file
-FileChangeWatcher.cpp.s:
-	cd /home/unroot/Desktop/piranha-framework/build && $(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.s
-.PHONY : FileChangeWatcher.cpp.s
 
 func.o: func.cpp.o
 
@@ -423,9 +397,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server-container"
-	@echo "... FileChangeWatcher.o"
-	@echo "... FileChangeWatcher.i"
-	@echo "... FileChangeWatcher.s"
 	@echo "... func.o"
 	@echo "... func.i"
 	@echo "... func.s"
@@ -464,6 +435,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	cd /home/unroot/Desktop/piranha-framework/build && $(CMAKE_COMMAND) -P /home/unroot/Desktop/piranha-framework/build/CMakeFiles/VerifyGlobs.cmake
 	cd /home/unroot/Desktop/piranha-framework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

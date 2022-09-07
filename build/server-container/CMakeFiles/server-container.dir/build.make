@@ -193,19 +193,6 @@ server-container/CMakeFiles/server-container.dir/template.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server-container.dir/template.cpp.s"
 	cd /home/unroot/Desktop/piranha-framework/build/server-container && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unroot/Desktop/piranha-framework/server-container/template.cpp -o CMakeFiles/server-container.dir/template.cpp.s
 
-server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o: server-container/CMakeFiles/server-container.dir/flags.make
-server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o: ../server-container/FileChangeWatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o"
-	cd /home/unroot/Desktop/piranha-framework/build/server-container && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o -c /home/unroot/Desktop/piranha-framework/server-container/FileChangeWatcher.cpp
-
-server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server-container.dir/FileChangeWatcher.cpp.i"
-	cd /home/unroot/Desktop/piranha-framework/build/server-container && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unroot/Desktop/piranha-framework/server-container/FileChangeWatcher.cpp > CMakeFiles/server-container.dir/FileChangeWatcher.cpp.i
-
-server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server-container.dir/FileChangeWatcher.cpp.s"
-	cd /home/unroot/Desktop/piranha-framework/build/server-container && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unroot/Desktop/piranha-framework/server-container/FileChangeWatcher.cpp -o CMakeFiles/server-container.dir/FileChangeWatcher.cpp.s
-
 # Object files for target server-container
 server__container_OBJECTS = \
 "CMakeFiles/server-container.dir/func.cpp.o" \
@@ -216,8 +203,7 @@ server__container_OBJECTS = \
 "CMakeFiles/server-container.dir/router.cpp.o" \
 "CMakeFiles/server-container.dir/tcp.cpp.o" \
 "CMakeFiles/server-container.dir/template_parser.cpp.o" \
-"CMakeFiles/server-container.dir/template.cpp.o" \
-"CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o"
+"CMakeFiles/server-container.dir/template.cpp.o"
 
 # External object files for target server-container
 server__container_EXTERNAL_OBJECTS =
@@ -231,10 +217,9 @@ server-container/libserver-container.a: server-container/CMakeFiles/server-conta
 server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/tcp.cpp.o
 server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/template_parser.cpp.o
 server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/template.cpp.o
-server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o
 server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/build.make
 server-container/libserver-container.a: server-container/CMakeFiles/server-container.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libserver-container.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libserver-container.a"
 	cd /home/unroot/Desktop/piranha-framework/build/server-container && $(CMAKE_COMMAND) -P CMakeFiles/server-container.dir/cmake_clean_target.cmake
 	cd /home/unroot/Desktop/piranha-framework/build/server-container && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server-container.dir/link.txt --verbose=$(VERBOSE)
 

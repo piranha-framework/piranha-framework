@@ -17,12 +17,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../server-container"
   "../lib/spdlog/include"
+  "../lib/yaml_cpp/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/unroot/Desktop/piranha-framework/build/server-container/CMakeFiles/server-container.dir/DependInfo.cmake"
   "/home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/spdlog.dir/DependInfo.cmake"
+  "/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

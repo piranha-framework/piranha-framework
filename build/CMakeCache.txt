@@ -360,6 +360,30 @@ SPDLOG_WCHAR_FILENAMES:BOOL=OFF
 //non supported option
 SPDLOG_WCHAR_SUPPORT:BOOL=OFF
 
+//Build yaml-cpp shared library
+YAML_BUILD_SHARED_LIBS:BOOL=OFF
+
+//Value Computed by CMake
+YAML_CPP_BINARY_DIR:STATIC=/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp
+
+//Enable yaml-cpp contrib in library
+YAML_CPP_BUILD_CONTRIB:BOOL=ON
+
+//Enable parse tools
+YAML_CPP_BUILD_TOOLS:BOOL=ON
+
+//Path to a program.
+YAML_CPP_CLANG_FORMAT_EXE:FILEPATH=YAML_CPP_CLANG_FORMAT_EXE-NOTFOUND
+
+//Format source
+YAML_CPP_FORMAT_SOURCE:BOOL=ON
+
+//Enable generation of yaml-cpp install targets
+YAML_CPP_INSTALL:BOOL=OFF
+
+//Value Computed by CMake
+YAML_CPP_SOURCE_DIR:STATIC=/home/unroot/Desktop/piranha-framework/lib/yaml_cpp
+
 //Value Computed by CMake
 spdlog_BINARY_DIR:STATIC=/home/unroot/Desktop/piranha-framework/build/lib/spdlog
 
@@ -516,7 +540,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -75,12 +75,14 @@ CMAKE_BINARY_DIR = /home/unroot/Desktop/piranha-framework/build
 all: CMakeFiles/Piranha.dir/all
 all: server-container/all
 all: lib/spdlog/all
+all: lib/yaml_cpp/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: server-container/preinstall
 preinstall: lib/spdlog/preinstall
+preinstall: lib/yaml_cpp/preinstall
 
 .PHONY : preinstall
 
@@ -88,6 +90,7 @@ preinstall: lib/spdlog/preinstall
 clean: CMakeFiles/Piranha.dir/clean
 clean: server-container/clean
 clean: lib/spdlog/clean
+clean: lib/yaml_cpp/clean
 
 .PHONY : clean
 
@@ -108,6 +111,48 @@ lib/spdlog/preinstall:
 lib/spdlog/clean: lib/spdlog/CMakeFiles/spdlog.dir/clean
 
 .PHONY : lib/spdlog/clean
+
+#=============================================================================
+# Directory level rules for directory lib/yaml_cpp
+
+# Recursive "all" directory target.
+lib/yaml_cpp/all: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+lib/yaml_cpp/all: lib/yaml_cpp/util/all
+
+.PHONY : lib/yaml_cpp/all
+
+# Recursive "preinstall" directory target.
+lib/yaml_cpp/preinstall: lib/yaml_cpp/util/preinstall
+
+.PHONY : lib/yaml_cpp/preinstall
+
+# Recursive "clean" directory target.
+lib/yaml_cpp/clean: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/clean
+lib/yaml_cpp/clean: lib/yaml_cpp/util/clean
+
+.PHONY : lib/yaml_cpp/clean
+
+#=============================================================================
+# Directory level rules for directory lib/yaml_cpp/util
+
+# Recursive "all" directory target.
+lib/yaml_cpp/util/all: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/all
+lib/yaml_cpp/util/all: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/all
+lib/yaml_cpp/util/all: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/all
+
+.PHONY : lib/yaml_cpp/util/all
+
+# Recursive "preinstall" directory target.
+lib/yaml_cpp/util/preinstall:
+
+.PHONY : lib/yaml_cpp/util/preinstall
+
+# Recursive "clean" directory target.
+lib/yaml_cpp/util/clean: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/clean
+lib/yaml_cpp/util/clean: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/clean
+lib/yaml_cpp/util/clean: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/clean
+
+.PHONY : lib/yaml_cpp/util/clean
 
 #=============================================================================
 # Directory level rules for directory server-container
@@ -133,6 +178,7 @@ server-container/clean: server-container/CMakeFiles/server-container.dir/clean
 # All Build rule for target.
 CMakeFiles/Piranha.dir/all: server-container/CMakeFiles/server-container.dir/all
 CMakeFiles/Piranha.dir/all: lib/spdlog/CMakeFiles/spdlog.dir/all
+CMakeFiles/Piranha.dir/all: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Piranha.dir/build.make CMakeFiles/Piranha.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Piranha.dir/build.make CMakeFiles/Piranha.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=1,2 "Built target Piranha"
@@ -140,7 +186,7 @@ CMakeFiles/Piranha.dir/all: lib/spdlog/CMakeFiles/spdlog.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Piranha.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 52
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Piranha.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
 .PHONY : CMakeFiles/Piranha.dir/rule
@@ -162,12 +208,12 @@ CMakeFiles/Piranha.dir/clean:
 server-container/CMakeFiles/server-container.dir/all:
 	$(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/depend
 	$(MAKE) $(MAKESILENT) -f server-container/CMakeFiles/server-container.dir/build.make server-container/CMakeFiles/server-container.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target server-container"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target server-container"
 .PHONY : server-container/CMakeFiles/server-container.dir/all
 
 # Build rule for subdir invocation for target.
 server-container/CMakeFiles/server-container.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server-container/CMakeFiles/server-container.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
 .PHONY : server-container/CMakeFiles/server-container.dir/rule
@@ -189,7 +235,7 @@ server-container/CMakeFiles/server-container.dir/clean:
 lib/spdlog/CMakeFiles/spdlog.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/spdlog/CMakeFiles/spdlog.dir/build.make lib/spdlog/CMakeFiles/spdlog.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/spdlog/CMakeFiles/spdlog.dir/build.make lib/spdlog/CMakeFiles/spdlog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21 "Built target spdlog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target spdlog"
 .PHONY : lib/spdlog/CMakeFiles/spdlog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -210,12 +256,121 @@ lib/spdlog/CMakeFiles/spdlog.dir/clean:
 .PHONY : lib/spdlog/CMakeFiles/spdlog.dir/clean
 
 #=============================================================================
+# Target rules for target lib/yaml_cpp/CMakeFiles/yaml-cpp.dir
+
+# All Build rule for target.
+lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/build.make lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/build.make lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52 "Built target yaml-cpp"
+.PHONY : lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+
+# Build rule for subdir invocation for target.
+lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
+.PHONY : lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/rule
+
+# Convenience name for target.
+yaml-cpp: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/rule
+
+.PHONY : yaml-cpp
+
+# clean rule for target.
+lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/build.make lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/clean
+.PHONY : lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/clean
+
+#=============================================================================
+# Target rules for target lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir
+
+# All Build rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/all: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=55,56 "Built target yaml-cpp-read"
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/all
+
+# Build rule for subdir invocation for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/rule
+
+# Convenience name for target.
+yaml-cpp-read: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/rule
+
+.PHONY : yaml-cpp-read
+
+# clean rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/clean
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir/clean
+
+#=============================================================================
+# Target rules for target lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir
+
+# All Build rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/all: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=53,54 "Built target yaml-cpp-parse"
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/all
+
+# Build rule for subdir invocation for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/rule
+
+# Convenience name for target.
+yaml-cpp-parse: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/rule
+
+.PHONY : yaml-cpp-parse
+
+# clean rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/clean
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir/clean
+
+#=============================================================================
+# Target rules for target lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir
+
+# All Build rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/all: lib/yaml_cpp/CMakeFiles/yaml-cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=57,58 "Built target yaml-cpp-sandbox"
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/all
+
+# Build rule for subdir invocation for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unroot/Desktop/piranha-framework/build/CMakeFiles 0
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/rule
+
+# Convenience name for target.
+yaml-cpp-sandbox: lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/rule
+
+.PHONY : yaml-cpp-sandbox
+
+# clean rule for target.
+lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/build.make lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/clean
+.PHONY : lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir/clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/unroot/Desktop/piranha-framework/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

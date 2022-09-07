@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/server-container.dir/FileChangeWatcher.cpp.o"
   "CMakeFiles/server-container.dir/func.cpp.o"
   "CMakeFiles/server-container.dir/http.cpp.o"
   "CMakeFiles/server-container.dir/http_url_extractor.cpp.o"

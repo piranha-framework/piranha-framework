@@ -7,3 +7,11 @@
 /home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/edit_cache.dir
 /home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/rebuild_cache.dir
 /home/unroot/Desktop/piranha-framework/build/lib/spdlog/CMakeFiles/spdlog.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/CMakeFiles/yaml-cpp.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/util/CMakeFiles/rebuild_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/util/CMakeFiles/yaml-cpp-read.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/util/CMakeFiles/edit_cache.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/util/CMakeFiles/yaml-cpp-parse.dir
+/home/unroot/Desktop/piranha-framework/build/lib/yaml_cpp/util/CMakeFiles/yaml-cpp-sandbox.dir

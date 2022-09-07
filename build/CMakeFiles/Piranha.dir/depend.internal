@@ -44,8 +44,11 @@ CMakeFiles/Piranha.dir/main.cpp.o
  ../lib/spdlog/include/spdlog/spdlog.h
  ../lib/spdlog/include/spdlog/tweakme.h
  ../lib/spdlog/include/spdlog/version.h
+ ../server-container/FileChangeWatcher.hpp
+ ../server-container/file_navigator.hpp
  ../server-container/http.hpp
  ../server-container/listener.hpp
  ../server-container/tcp.hpp
  ../server-container/template_parser.hpp
+ /home/unroot/Desktop/piranha-framework/config.hpp
  /home/unroot/Desktop/piranha-framework/main.cpp

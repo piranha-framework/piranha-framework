@@ -100,6 +100,7 @@ Piranha: CMakeFiles/Piranha.dir/main.cpp.o
 Piranha: CMakeFiles/Piranha.dir/build.make
 Piranha: server-container/libserver-container.a
 Piranha: lib/spdlog/libspdlog.a
+Piranha: lib/yaml_cpp/libyaml-cpp.a
 Piranha: CMakeFiles/Piranha.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unroot/Desktop/piranha-framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Piranha"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Piranha.dir/link.txt --verbose=$(VERBOSE)

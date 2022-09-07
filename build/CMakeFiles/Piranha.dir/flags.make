@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/unroot/Desktop/piranha-framework/server-container -I/home/unroot/Desktop/piranha-framework/lib/spdlog/include
+CXX_INCLUDES = -I/home/unroot/Desktop/piranha-framework/server-container -I/home/unroot/Desktop/piranha-framework/lib/spdlog/include -I/home/unroot/Desktop/piranha-framework/lib/yaml_cpp/include
 
 CXX_FLAGS = -O3 -DNDEBUG
 

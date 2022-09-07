@@ -43,9 +43,12 @@ CMakeFiles/Piranha.dir/main.cpp.o: ../lib/spdlog/include/spdlog/spdlog-inl.h
 CMakeFiles/Piranha.dir/main.cpp.o: ../lib/spdlog/include/spdlog/spdlog.h
 CMakeFiles/Piranha.dir/main.cpp.o: ../lib/spdlog/include/spdlog/tweakme.h
 CMakeFiles/Piranha.dir/main.cpp.o: ../lib/spdlog/include/spdlog/version.h
+CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/FileChangeWatcher.hpp
+CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/file_navigator.hpp
 CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/http.hpp
 CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/listener.hpp
 CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/tcp.hpp
 CMakeFiles/Piranha.dir/main.cpp.o: ../server-container/template_parser.hpp
+CMakeFiles/Piranha.dir/main.cpp.o: ../config.hpp
 CMakeFiles/Piranha.dir/main.cpp.o: ../main.cpp
 
